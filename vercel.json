@@ -8,16 +8,18 @@
         }
       }
     ],
-    "routes": [
+    "headers": [
       {
-        "src": "/remoteEntry.js",
+        "source": "/remoteEntry.js",
         "headers": [
           {
             "key": "Content-Type",
             "value": "application/javascript"
           }
         ]
-      },
+      }
+    ],
+    "routes": [
       {
         "src": "/(.*)",
         "dest": "/index.html"
