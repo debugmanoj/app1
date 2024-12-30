@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import federation from "@originjs/vite-plugin-federation";
 // Load the dependencies from package.json
-import pkg from './package.json';
+import pkg from "./package.json";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -21,5 +21,6 @@ export default defineConfig({
   },
   build: {
     target: "esnext",
+    outDir: "dist", // Ensure this matches where Vercel serves files
   },
 });
